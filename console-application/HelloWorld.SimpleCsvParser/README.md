@@ -1,4 +1,4 @@
-# Hello World
+# Simple CSV Parser
 
 ## Objective
 This is to show how to create a console application to parse a CSV file. A sample CSV file, sample.csv, is provided in the AppData folder.
