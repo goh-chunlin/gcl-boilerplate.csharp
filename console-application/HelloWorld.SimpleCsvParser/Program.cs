@@ -37,6 +37,11 @@ namespace HelloWorld.SimpleCsvParser
 
             foreach(var record in records)
             {
+                if (!record.IsValid)
+                {
+                    continue;
+                }
+
                 WriteLine($"User {record.Result.Id}: ");
                 WriteLine($"Name: {record.Result.FirstName} {record.Result.LastName}");
                 WriteLine($"Address: {record.Result.Address}");
