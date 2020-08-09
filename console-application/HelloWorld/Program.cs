@@ -4,7 +4,7 @@ namespace HelloWorld
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             WriteLine("Hello World!");
         }
