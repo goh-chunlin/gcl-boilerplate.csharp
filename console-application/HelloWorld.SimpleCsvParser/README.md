@@ -4,8 +4,8 @@
 This is to show how to create a console application to parse a CSV file. A sample CSV file, sample.csv, is provided in the AppData folder.
 
 ## Technical Specification
-Language: C# 8.0
-Framework: .NET Core 3.1
+Language: C# 8.0\
+Framework: .NET Core 3.1\
 NuGet Packages:
  - [TinyCsvParser](https://www.nuget.org/packages/TinyCsvParser/)
  

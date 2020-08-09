@@ -4,8 +4,8 @@
 This is to show how to create a console application.
 
 ## Technical Specification
-Language: C# 8.0
-Framework: .NET Core 3.1
+Language: C# 8.0\
+Framework: .NET Core 3.1\
 
 ## How to Run?
 1. Execute the command below.\
