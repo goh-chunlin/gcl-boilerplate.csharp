@@ -1,7 +1,7 @@
 # JSON File Writer
 
 ## Objective
-This is to show how to create a console application to create a JSON file. The output JSON file will be save to the C:\Temp folder.
+This is to show how to create a console application to read a JSON file. A sample JSON file, sample.json, is provided in the AppData folder.
 
 ## Technical Specification
 Language: C# 9.0\
