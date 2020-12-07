@@ -15,3 +15,8 @@ NuGet Packages:
 ## How to Run?
 1. Execute the command below.\
    `dotnet run`
+
+## References
+1. [Repository Pattern: A data persistence abstraction](https://deviq.com/repository-pattern/);
+1. [Using dependency injection in a .Net Core console application](https://andrewlock.net/using-dependency-injection-in-a-net-core-console-application/);
+1. [Accessing dbContext in a C# console application](https://stackoverflow.com/a/49973934/1177328).
