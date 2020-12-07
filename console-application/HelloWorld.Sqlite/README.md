@@ -6,7 +6,11 @@ A sample SQLite database file, sample.db, is provided in the AppData folder.
 
 ## Technical Specification
 Language: C# 9.0\
-Framework: .NET 5, Entity Framework Core 5.0.0
+Framework: .NET 5, Entity Framework Core 5.0.0\
+NuGet Packages:
+ - [Entity Framework Core (5.0.0)](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/);
+ - [Entity Framework Core Design (5.0.0)](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/);
+ - [Entity Framework Core SQLite (5.0.0)](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite/);
 
 ## How to Run?
 1. Execute the command below.\
