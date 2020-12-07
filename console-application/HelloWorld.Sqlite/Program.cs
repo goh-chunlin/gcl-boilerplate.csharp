@@ -22,9 +22,20 @@ namespace HelloWorld.Sqlite
             var serviceProvider = services.BuildServiceProvider();
 
             var buildingService = serviceProvider.GetService<IBuildingService>();
-            var buildings = await buildingService.GetBuildingsAsync();
+
+            var buildings = await buildingService.GetAllBuildingsAsync();
 
             foreach (var building in buildings) 
+            {
+                WriteLine($"Building {building.Id}: {building.Name}");
+                WriteLine($"Address: {building.Address}");
+                WriteLine();
+            }
+
+            var allDeletedBuildings = await buildingService.GetAllDeletedBuildingsAsync();
+
+            WriteLine("====== Deleted Buildings ======");
+            foreach (var building in allDeletedBuildings)
             {
                 WriteLine($"Building {building.Id}: {building.Name}");
                 WriteLine($"Address: {building.Address}");

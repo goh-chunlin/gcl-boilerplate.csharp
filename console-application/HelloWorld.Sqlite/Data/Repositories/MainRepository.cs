@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using HelloWorld.Sqlite.Data.Contexts;
 using HelloWorld.Sqlite.Data.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace HelloWorld.Sqlite.Data.Repositories
 {
@@ -49,6 +50,11 @@ namespace HelloWorld.Sqlite.Data.Repositories
         public IQueryable<T> GetAll()
         {
             return entities.AsQueryable();
+        }
+
+        public IQueryable<T> GetAll(Expression<Func<T, bool>> predicate)
+        {
+            return entities.Where(predicate);
         }
 
         public async Task<T> GetAsync(int id)

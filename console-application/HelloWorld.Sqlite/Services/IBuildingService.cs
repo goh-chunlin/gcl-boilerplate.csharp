@@ -9,7 +9,9 @@ namespace HelloWorld.Sqlite.Services
 {
     public interface IBuildingService
     {
-        Task<IEnumerable<BuildingViewModel>> GetBuildingsAsync();
+        Task<IEnumerable<BuildingViewModel>> GetAllBuildingsAsync();
+
+        Task<IEnumerable<BuildingViewModel>> GetAllDeletedBuildingsAsync();
 
         Task CreateBuildingAsync(BuildingViewModel model, string actionUser);
     }

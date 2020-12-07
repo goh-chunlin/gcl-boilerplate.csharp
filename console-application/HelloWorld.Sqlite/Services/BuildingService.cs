@@ -19,7 +19,7 @@ namespace HelloWorld.Sqlite.Services
             _repoBuilding = repoBuilding;
         }
 
-        public async Task<IEnumerable<BuildingViewModel>> GetBuildingsAsync()
+        public async Task<IEnumerable<BuildingViewModel>> GetAllBuildingsAsync()
         {
             var allbuildings = await _repoBuilding.GetAll().ToListAsync();
 
@@ -28,6 +28,25 @@ namespace HelloWorld.Sqlite.Services
             foreach (var building in allbuildings)
             {
                 output.Add(new BuildingViewModel 
+                {
+                    Id = building.Id,
+                    Name = building.Name,
+                    Address = building.Address
+                });
+            }
+
+            return output;
+        }
+
+        public async Task<IEnumerable<BuildingViewModel>> GetAllDeletedBuildingsAsync()
+        {
+            var allbuildings = await _repoBuilding.GetAll(x => x.IsSoftDeleted).ToListAsync();
+
+            var output = new List<BuildingViewModel>();
+
+            foreach (var building in allbuildings)
+            {
+                output.Add(new BuildingViewModel
                 {
                     Id = building.Id,
                     Name = building.Name,
