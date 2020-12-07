@@ -15,6 +15,15 @@
                 The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
                 Place your content here.
             -->
+            <StackPanel>
+                <Button x:Name="btnMain"
+                    Command="{Binding MainButtonClickedCommand, Mode=OneTime}"
+                    ToolTipService.ToolTip="This is a main button">
+                    Main Button
+                </Button>
+                <TextBlock x:Name="txtMessage" Text="{Binding DemoMessage, Mode=OneWay}" />
+            </StackPanel>
+            
         </Grid>
     </Grid>
 </Page>

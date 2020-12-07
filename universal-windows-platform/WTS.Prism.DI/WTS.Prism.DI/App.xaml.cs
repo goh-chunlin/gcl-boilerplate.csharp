@@ -13,7 +13,8 @@ using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Resources;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-
+using WTS.Prism.DI.Core.Interfaces;
+using WTS.Prism.DI.Core.Services;
 using WTS.Prism.DI.Views;
 
 namespace WTS.Prism.DI
@@ -32,6 +33,8 @@ namespace WTS.Prism.DI
             // register a singleton using Container.RegisterType<IInterface, Type>(new ContainerControlledLifetimeManager());
             base.ConfigureContainer();
             Container.RegisterInstance<IResourceLoader>(new ResourceLoaderAdapter(new ResourceLoader()));
+
+            Container.RegisterType<ICustomService, CustomService>(new ContainerControlledLifetimeManager());
         }
 
         protected override async Task OnLaunchApplicationAsync(LaunchActivatedEventArgs args)
