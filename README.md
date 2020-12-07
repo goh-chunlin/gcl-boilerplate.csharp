@@ -6,3 +6,11 @@ This is a project that aims to assist me to come up with solutions quickly in ce
 ## Useful Tips
 1. Get CSharp versions supported.\
    `csc -langversion:?`
+   
+## License ##
+
+The code samples are distributed under the GPL-3.0 License found in the [LICENSE](./LICENSE) file.
+
+Copyright 2020 The AUTHORS of this project. All rights reserved. 
+
+Use of the source codes is governed by a license that can be found in the [LICENSE](./LICENSE) file.
