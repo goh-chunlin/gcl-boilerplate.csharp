@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PopupModal.Views;
+using Rg.Plugins.Popup.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,6 +15,11 @@ namespace PopupModal
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private async void ShowPopupButton_Clicked(object sender, EventArgs e)
+        {
+            await PopupNavigation.Instance.PushAsync(new SimplePopupPage());
         }
     }
 }

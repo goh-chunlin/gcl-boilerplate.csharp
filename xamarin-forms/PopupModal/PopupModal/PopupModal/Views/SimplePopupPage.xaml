@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage  
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PopupModal.Views.SimplePopupPage"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup">
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </pages:PopupPage.Resources>
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="20, 20, 20, 20">
+        <StackLayout BackgroundColor="White" Padding="40">
+            <Label Text="Sample Popup" Style="{DynamicResource Header3}"></Label>
+            <ScrollView>
+                <StackLayout>
+                    <BoxView HeightRequest="1" Color="{DynamicResource Gray-500}" Margin ="40, 10, 40, 30"/>
+                    <Label Text="Name" TextColor="{DynamicResource Gray-800}" Style="{DynamicResource Header4}"></Label>
+                    <Entry x:Name="ResourceNameEntry" Placeholder="Enter the name here" HorizontalOptions="FillAndExpand" PlaceholderColor="{DynamicResource Gray-400}" 
+                           TextColor="{DynamicResource Gray-800}" />
+                    <Grid Margin="0,40,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="45*" />
+                            <ColumnDefinition Width="55*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Text="Cancel" HorizontalOptions="EndAndExpand" Margin="0,0,0,6"
+                            WidthRequest="120" CornerRadius="5" TextColor="{DynamicResource Gray-800}" BackgroundColor="Transparent" Clicked="ClosePopupButton_Clicked"/>
+                        <Button Grid.Column="1" Text="Submit" HorizontalOptions="StartAndExpand" Margin="0,0,0,6"
+                            WidthRequest="120" CornerRadius="5" TextColor="White" BackgroundColor="{StaticResource PrimaryDarkenColor}"/>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </StackLayout>
+</pages:PopupPage>
