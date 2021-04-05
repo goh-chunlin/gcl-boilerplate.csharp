@@ -10,7 +10,9 @@ This is to show how to create a popup modal in a Xamarin.Form application using 
 ## Technical Specification
 Language: C# 9.0\
 Framework: Xamarin.Form 5.0, .NET Standard 2.0\
-Windows 10 SDK: Version 2004 (10.0.19041.0), the minimum target must be 10.0.17763 or higher.
+Windows 10 SDK: Version 2004 (10.0.19041.0), the minimum target must be 10.0.17763 or higher\
+NuGet Packages:
+ - [Rg.Plugins.Popup](https://www.nuget.org/packages/Rg.Plugins.Popup)
 
 ## How to Run?
 1. Launch this solution in Visual Studio 2019 (16.8.2 and above);
