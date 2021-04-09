@@ -3,6 +3,10 @@
 ## Objective
 This is to show how to add/update/delete items in a Xamarin.Form CollectionView with ObservableCollection.
 
+<div align="center">
+    <img src="https://gclstorage.blob.core.windows.net/images/SimpleObservableCollection.png" />
+</div>
+
 ## Technical Specification
 Language: C# 9.0\
 Framework: Xamarin.Form 5.0, .NET Standard 2.0\
