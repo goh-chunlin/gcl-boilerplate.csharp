@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="SimpleObservableCollection.Views.Styles"
+                    xmlns:iOsSpecific="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
+
+    <Color x:Key="PrimaryColor">#445BC1</Color>
+    <Color x:Key="PrimaryDarkColor">#2C43B8</Color>
+    <Color x:Key="PrimaryDarkenColor">#002563</Color>
+    <Color x:Key="PrimaryLighterColor">#87ceeb</Color>
+    <Color x:Key="PrimaryGradient">#87ceeb</Color>
+    <Color x:Key="PrimaryLight">#6987D5</Color>
+    <Color x:Key="SecondaryGradient">#7644ad</Color>
+    <Color x:Key="Secondary">#97BAEC</Color>
+    <Color x:Key="Green">#7ed321</Color>
+    <Color x:Key="Red">#ff4a4a</Color>
+    <Color x:Key="Orange">#ff844a</Color>
+    <Color x:Key="Blue">#4acaff</Color>
+    <Color x:Key="HyperLink">#567cd7</Color>
+
+    <Color x:Key="Gray-100">#f6f7f8</Color>
+    <Color x:Key="Gray-200">#ebecef</Color>
+    <Color x:Key="Gray-300">#ced2d9</Color>
+    <Color x:Key="Gray-400">#b2b8c2</Color>
+    <Color x:Key="Gray-500">#959eac</Color>
+    <Color x:Key="Gray-600">#788396</Color>
+    <Color x:Key="Gray-700">#606a7b</Color>
+    <Color x:Key="Gray-800">#4a515e</Color>
+    <Color x:Key="Gray-900">#333942</Color>
+    <Color x:Key="Gray-Black">#000000</Color>
+    <Color x:Key="Gray-White">#ffffff</Color>
+
+    <!--  Common style for header texts  -->
+    <Style x:Key="Header3" TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource PrimaryDarkenColor}" />
+        <Setter Property="Font" Value="Bold,18" />
+    </Style>
+
+    <Style x:Key="Header4" TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource PrimaryDarkenColor}" />
+        <Setter Property="Font" Value="Bold,14" />
+    </Style>
+
+</ResourceDictionary>

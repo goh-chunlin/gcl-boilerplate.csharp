@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleObservableCollection.MainPage"
+             xmlns:viewmodels="clr-namespace:SimpleObservableCollection.ViewModels"
+             BindingContext="{Binding MainViewModel,Source={StaticResource ViewModelLocator}}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Views/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Simple Observable Collection" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="How to Listen to Property Changes of Items of an ObservableCollection?" FontSize="16" Padding="30,0,30,0"/>
+        
+        <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding Items}"
+                SelectionMode="None"
+                Margin="10">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding Name}" LineBreakMode="NoWrap" FontSize="16" />
+                        <Label Text="Edit" FontSize="16" TextColor="{DynamicResource Green}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:MainViewModel}}, Path=EditItemCommand}" CommandParameter="{Binding Id}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label Text="Delete" FontSize="16" TextColor="{DynamicResource Red}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:MainViewModel}}, Path=DeleteItemCommand}" CommandParameter="{Binding Id}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                    
+                    
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <BoxView HeightRequest="1" Color="{DynamicResource Gray-500}" Margin ="40, 10, 40, 30"/>
+
+        <Grid>
+            <Button Text="Add New Item" Margin="0,10,0,10" 
+                HorizontalOptions="CenterAndExpand" WidthRequest="120" HeightRequest="60" CornerRadius="5" TextColor="White" 
+                BackgroundColor="{StaticResource PrimaryDarkenColor}" Command="{Binding AddNewItemCommand}"/>
+        </Grid>
+        
+    </StackLayout>
+
+</ContentPage>
