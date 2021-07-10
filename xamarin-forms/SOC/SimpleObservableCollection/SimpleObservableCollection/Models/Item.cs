@@ -12,16 +12,13 @@ namespace SimpleObservableCollection.Models
 
         public string Id { get; set; } = Guid.NewGuid().ToString();
 
-        public string Name
-        {
-            get => _name;
-            set
-            {
-                if (_name == value) return;
-                _name = value;
+        public string Name { get; set; }
 
-                OnPropertyChanged();
-            }
+        public string NameWithPrefix => $"Mr {Name}";
+
+        public void UpdateThis() 
+        {
+            OnPropertyChanged("Name");
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -8,7 +8,7 @@ namespace SimpleObservableCollection.Services
 {
     public interface IMainService
     {
-        ObservableCollection<Item> GetAllItems();
+        ObservableCollection<ItemCollection> GetAllItems();
 
         void AddItem(string name);
 

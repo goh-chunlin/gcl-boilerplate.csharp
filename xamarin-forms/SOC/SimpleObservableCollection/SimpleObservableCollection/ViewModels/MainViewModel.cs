@@ -18,7 +18,7 @@ namespace SimpleObservableCollection.ViewModels
             _mainService = mainService;
         }
 
-        public ObservableCollection<Item> Items => _mainService.GetAllItems();
+        public ObservableCollection<ItemCollection> Items => _mainService.GetAllItems();
 
         public ICommand AddNewItemCommand => new Command(
             execute: () =>

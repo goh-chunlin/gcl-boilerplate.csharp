@@ -24,22 +24,25 @@
                 Margin="10">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="{Binding Name}" LineBreakMode="NoWrap" FontSize="16" />
-                        <Label Text="Edit" FontSize="16" TextColor="{DynamicResource Green}">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:MainViewModel}}, Path=EditItemCommand}" CommandParameter="{Binding Id}" />
-                            </Label.GestureRecognizers>
-                        </Label>
-                        <Label Text="Delete" FontSize="16" TextColor="{DynamicResource Red}">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:MainViewModel}}, Path=DeleteItemCommand}" CommandParameter="{Binding Id}" />
-                            </Label.GestureRecognizers>
-                        </Label>
-                    </StackLayout>
-                    
-                    
+                    <CollectionView ItemsSource="{Binding Items}" SelectionMode="None" Margin="10" HeightRequest="100">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Name}" LineBreakMode="NoWrap" FontSize="16" />
+                                    <Label Text="Edit" FontSize="16" TextColor="{DynamicResource Green}">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:MainViewModel}}, Path=EditItemCommand}" CommandParameter="{Binding Id}" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                    <Label Text="Delete" FontSize="16" TextColor="{DynamicResource Red}">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:MainViewModel}}, Path=DeleteItemCommand}" CommandParameter="{Binding Id}" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
