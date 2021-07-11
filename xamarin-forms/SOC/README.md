@@ -1,4 +1,4 @@
-# Simple Observable Collection
+# Simple Observable Collection (SOC)
 
 ## Objective
 This is to show how to add/update/delete items in a Xamarin.Form CollectionView with ObservableCollection.
