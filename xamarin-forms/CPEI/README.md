@@ -11,7 +11,7 @@ This is a demo showing the use of Embedded Images so that images can be shared a
 Framework: Xamarin.Form 5.0, .NET Standard 2.0\
 Windows 10 SDK: Version 2004 (10.0.19041.0), the minimum target must be 10.0.16299 or higher\
 Android SDK: 30, the minimum target must be 21 or higher\
-iOS Deployment Target: 14.5\
+iOS Deployment Target: 14.5
 
 ## How to Run?
 ### Windows 10
