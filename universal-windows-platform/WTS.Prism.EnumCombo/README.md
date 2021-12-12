@@ -3,6 +3,10 @@
 ## Objective
 This is to show how to bind an enum to a ComboBox control in a UWP application with Prism as the design pattern.
 
+<div align="center">
+    <img src="https://gclstorage.blob.core.windows.net/images/enumcombobox-demo.gif" />
+</div>
+
 ## Technical Specification
 Language: C# 9.0\
 Framework: .NET 5, .NET Standard 2.0\
