@@ -16,3 +16,6 @@ Windows 10 SDK: Version 2004 (10.0.19041.0)
 1. Launch this solution in Visual Studio 2019 (16.8.2 and above);
 2. Set `WTS.Prism.EnumCombo` as the Startup Project;
 3. Launch it on x64 Local Machine in Debug mode.
+
+## References
+- [How to bind an enum to a combobox control in WPF?](https://stackoverflow.com/a/51574561/1177328).
