@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="WTS.Prism.EnumCombo.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Style="{StaticResource PageStyle}"
+    xmlns:local="using:WTS.Prism.EnumCombo.Helpers"
+    xmlns:prismMvvm="using:Prism.Windows.Mvvm"
+    prismMvvm:ViewModelLocator.AutoWireViewModel="True" 
+    mc:Ignorable="d">
+    <Page.Resources>
+        <local:MyColorValueConverter x:Key="MyColorValueConverter" />
+    </Page.Resources>
+    <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Grid.Row="0"
+            x:Uid="Main_Title"
+            Style="{StaticResource PageTitleStyle}" />
+        <Grid
+            Grid.Row="1" 
+            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+
+            <StackPanel>
+                <ComboBox
+                    ItemsSource="{Binding Source={StaticResource MyColorValueConverter}, Path=Strings}"
+                    SelectedItem="{Binding SelectedColor, Converter={StaticResource MyColorValueConverter}, Mode=TwoWay}"/>
+
+                <TextBlock>
+                    <Run Text="Your selection is" />
+                    <Run Text="{Binding SelectedColor}" Foreground="{Binding FontColor}" FontWeight="Bold" TextDecorations="Underline" />
+                    <Run Text="." />
+                </TextBlock>
+
+
+            </StackPanel>
+
+            
+        </Grid>
+    </Grid>
+</Page>

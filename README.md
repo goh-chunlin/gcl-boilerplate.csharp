@@ -1,4 +1,4 @@
-# GCL Boileterplate for C#
+# GCL Boilerplate for C#
 
 <div align="center">
     <img src="https://gclstorage.blob.core.windows.net/images/gcl-boilerplate-csharp-banner.png" />
