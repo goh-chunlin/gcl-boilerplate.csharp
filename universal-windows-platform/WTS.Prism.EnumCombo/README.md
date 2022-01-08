@@ -8,7 +8,7 @@ This is to show how to bind an enum to a ComboBox control in a UWP application w
 </div>
 
 ## Technical Specification
-Language: C# 9.0\
+Language: C# 7.3\
 Framework: .NET 5, .NET Standard 2.0\
 Windows 10 SDK: Version 2004 (10.0.19041.0)
 

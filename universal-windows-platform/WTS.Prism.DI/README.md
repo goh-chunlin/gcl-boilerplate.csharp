@@ -4,7 +4,7 @@
 This is to show how to create a UWP application using Windows Template Studio with Prism as the design pattern. It also shows how we can use Dependency Injection to inject our custom service(s).
 
 ## Technical Specification
-Language: C# 9.0\
+Language: C# 7.3\
 Framework: .NET 5, .NET Standard 2.0\
 Windows 10 SDK: Version 2004 (10.0.19041.0)
 

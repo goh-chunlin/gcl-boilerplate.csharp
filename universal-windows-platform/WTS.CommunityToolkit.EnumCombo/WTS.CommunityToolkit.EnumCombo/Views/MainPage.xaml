@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="WTS.CommunityToolkit.EnumCombo.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Style="{StaticResource PageStyle}"
+    xmlns:converters="using:WTS.CommunityToolkit.EnumCombo.Helpers"
+    xmlns:prismMvvm="using:Prism.Windows.Mvvm"
+    prismMvvm:ViewModelLocator.AutoWireViewModel="True" 
+    mc:Ignorable="d">
+    <Page.Resources>
+        <converters:TranslateToChineseConverter x:Key="TranslateToChineseConverter"/>
+    </Page.Resources>
+    <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Grid.Row="0"
+            x:Uid="Main_Title"
+            Style="{StaticResource PageTitleStyle}" />
+        <Grid
+            Grid.Row="1" 
+            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+            <StackPanel>
+                <ComboBox
+                    xmlns:toolkitui="using:Microsoft.Toolkit.Uwp.UI"
+                    xmlns:enums="using:WTS.CommunityToolkit.EnumCombo.Core.Enums"
+                    ItemsSource="{toolkitui:EnumValues Type=enums:MyColors}"
+                    SelectedItem="{Binding SelectedColor, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <Run Text="{Binding}" />
+                                <Run Text=":" />
+                                <Run Text="{Binding Converter={StaticResource TranslateToChineseConverter}}" />
+                            </TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <TextBlock>
+                    <Run Text="Your selection is" />
+                    <Run Text="{Binding SelectedColor}" Foreground="{Binding FontColor}" FontWeight="Bold" TextDecorations="Underline" />
+                    <Run Text="." />
+                </TextBlock>
+
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
