@@ -17,3 +17,7 @@ Framework: .NET 3.5
   ![image](https://github.com/goh-chunlin/gcl-boilerplate.csharp/assets/8535306/d8ab58c3-6d9f-4f76-b852-688d31c3833b)
 
 2. Run the project in Visual Studio.
+
+## Blog Post
+
+Read more about this project at [https://cuteprogramming.wordpress.com/2023/06/30/multipart-form-upload-using-webclient-in-net-framework-3-5/](https://cuteprogramming.wordpress.com/2023/06/30/multipart-form-upload-using-webclient-in-net-framework-3-5/).
