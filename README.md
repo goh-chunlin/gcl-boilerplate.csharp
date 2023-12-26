@@ -13,7 +13,9 @@ This is a project that aims to assist me to come up with solutions quickly in ce
 ## Useful Tips
 1. Get CSharp versions supported.\
    `csc -langversion:?`
-   
+
+   ![image](https://github.com/goh-chunlin/gcl-boilerplate.csharp/assets/8535306/d0ca2cf5-3a39-4ac0-809c-869ce379dff5)
+
 ## License ##
 
 The code samples are distributed under the GPL-3.0 License found in the [LICENSE](./LICENSE) file.
